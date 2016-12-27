@@ -1,5 +1,5 @@
-real :: mealCost
-integer :: tipPercent, taxPercent, roundedTotalCost
+REAL :: mealCost
+INTEGER :: tipPercent, taxPercent, roundedTotalCost
 
 READ *, mealCost
 READ *, tipPercent
