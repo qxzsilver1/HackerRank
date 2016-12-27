@@ -9,3 +9,4 @@ totalCost = mealCost + tip + tax;
 roundedTotalCost = round(totalCost);
 
 disp(cstrcat("The total meal cost is ", int2str(roundedTotalCost), " dollars."));
+
