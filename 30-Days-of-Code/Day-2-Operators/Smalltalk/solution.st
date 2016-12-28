@@ -44,3 +44,43 @@ tax := mealCost * (taxPercent / 100.0) .
 totalCost := mealCost + tip + tax .
 
 Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr ."
+
+"
+inputArray := stdin contents .
+inputArray inspect .
+
+| array |
+array := 'Hello,How,Are,You,Today' subStrings: $,.
+array fold: [:concatenation :string | concatenation, '.', string ]
+
+mealCost := inputArray first .
+tipPercent := inputArray second .
+taxPercent := inputArray last .
+
+Transcript show: mealCost; cr .
+
+mealCost := inputStringOne.
+
+Transcript show: inputStringOne; cr .
+
+inputStringTwo := stdin nextLine.
+tipPercent := inputStringTwo.
+
+Transcript show: inputStringTwo; cr .
+
+inputString := stdin nextLine.
+taxPercent := inputString .
+
+mealCost inspect .
+tipPercent inspect .
+taxPercent inspect .
+
+Transcript show: mealCost; cr ."
+"Transcript show: tipPercent; cr .
+
+tip := mealCost * (tipPercent / 100.0) .
+tax := mealCost * (taxPercent / 100.0) .
+totalCost := mealCost + tip + tax .
+
+Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr .
+"
