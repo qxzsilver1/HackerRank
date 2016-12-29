@@ -29,7 +29,6 @@ inputString fold: [:concatenation :string | concatenation, '.', string ] .
 mealCost := inputString at: 1 .
 tipPercent := inputString at: 2 .
 taxPercent := inputString at: 3 .
-
 " end of getting input as string and readying the data "
 
 mealCost := mealCost asNumber .
