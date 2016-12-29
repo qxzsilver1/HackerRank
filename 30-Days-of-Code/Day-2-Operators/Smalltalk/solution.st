@@ -1,11 +1,7 @@
 " one way to get input - this should work
 mealCost := stdin nextLine .
-mealCost inspect .
-inputString := stdin nextLine .
 tipPercent := stdin nextLine .
-tipPercent inspect .
 taxPercent := stdin nextLine .
-taxPercent inspect .
 "
 
 " another way to get input - this should work as well
@@ -21,6 +17,7 @@ taxPercent := inputStringThree .
 
 " the other way I did it since something doesn't work in HackerRank "
 inputString := stdin contents .
+"inputString inspect."
 
 inputString := inputString replacingAllRegex: '\n' with: ',' .
 inputString := inputString subStrings: $,.
