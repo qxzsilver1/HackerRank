@@ -30,11 +30,20 @@ mealCost := inputString at: 1 .
 tipPercent := inputString at: 2 .
 taxPercent := inputString at: 3 .
 
+" end of getting input as string and readying the data "
+
+mealCost := mealCost asNumber .
+tipPercent := tipPercent asInteger .
+taxPercent := taxPercent asInteger .
 
 tip := mealCost * (tipPercent / 100.0) .
 tax := mealCost * (taxPercent / 100.0) .
 totalCost := mealCost + tip + tax .
 
-Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr .
+roundedTotalCost := totalCost roundTo: 1 .
+roundedTotalCost := roundedTotalCost asInteger .
+
+Transcript show: 'The total meal cost is ', roundedTotalCost printString, ' dollars.'; cr .
+
 
 
