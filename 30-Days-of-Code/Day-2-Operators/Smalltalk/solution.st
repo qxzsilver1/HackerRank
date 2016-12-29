@@ -1,3 +1,4 @@
+" one way to get input - this should work
 mealCost := stdin nextLine .
 mealCost inspect .
 inputString := stdin nextLine .
@@ -5,82 +6,35 @@ tipPercent := stdin nextLine .
 tipPercent inspect .
 taxPercent := stdin nextLine .
 taxPercent inspect .
-
-Transcript show: mealCost; cr .
-"
-tip := mealCost * (tipPercent / 100.0) .
-tax := mealCost * (taxPercent / 100.0) .
-totalCost := mealCost + tip + tax .
-
-Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr ."
-
 "
 
-inputS := stdin contents.
-inputS inspect .
-
+" another way to get input - this should work as well
 inputStringOne := stdin nextLine.
 mealCost := inputStringOne.
 
-Transcript show: inputStringOne; cr .
-
 inputStringTwo := stdin nextLine.
 tipPercent := inputStringTwo.
 
-Transcript show: inputStringTwo; cr .
-
-inputString := stdin nextLine.
-taxPercent := inputString .
-
-mealCost inspect .
-tipPercent inspect .
-taxPercent inspect .
-
-Transcript show: mealCost; cr .
-Transcript show: tipPercent; cr .
-
-tip := mealCost * (tipPercent / 100.0) .
-tax := mealCost * (taxPercent / 100.0) .
-totalCost := mealCost + tip + tax .
-
-Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr ."
-
+inputStringThree := stdin nextLine.
+taxPercent := inputStringThree .
 "
-inputArray := stdin contents .
-inputArray inspect .
 
-| array |
-array := 'Hello,How,Are,You,Today' subStrings: $,.
-array fold: [:concatenation :string | concatenation, '.', string ]
+" the other way I did it since something doesn't work in HackerRank "
+inputString := stdin contents .
 
-mealCost := inputArray first .
-tipPercent := inputArray second .
-taxPercent := inputArray last .
+inputString := inputString replacingAllRegex: '\n' with: ',' .
+inputString := inputString subStrings: $,.
+inputString fold: [:concatenation :string | concatenation, '.', string ] .
 
-Transcript show: mealCost; cr .
+mealCost := inputString at: 1 .
+tipPercent := inputString at: 2 .
+taxPercent := inputString at: 3 .
 
-mealCost := inputStringOne.
-
-Transcript show: inputStringOne; cr .
-
-inputStringTwo := stdin nextLine.
-tipPercent := inputStringTwo.
-
-Transcript show: inputStringTwo; cr .
-
-inputString := stdin nextLine.
-taxPercent := inputString .
-
-mealCost inspect .
-tipPercent inspect .
-taxPercent inspect .
-
-Transcript show: mealCost; cr ."
-"Transcript show: tipPercent; cr .
 
 tip := mealCost * (tipPercent / 100.0) .
 tax := mealCost * (taxPercent / 100.0) .
 totalCost := mealCost + tip + tax .
 
 Transcript show: 'The total meal cost is ', mealCost printString, 'dollars.'; cr .
-"
+
+
