@@ -18,7 +18,7 @@ public class Solution {
       else{
          if(n >= 6 && n <= 20)
              ans = "Weird";
-          else
+         else
              ans = "Not Weird";
       }
       System.out.println(ans);
