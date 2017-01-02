@@ -15,7 +15,7 @@ public class Person {
 
      public void amIOld() {
 	String s;
-		if (age < 13)
+	if (age < 13)
 	    s = "You are young.";
 	else if (age >= 13 && age < 18)
 	    s = "You are a teenager.";
