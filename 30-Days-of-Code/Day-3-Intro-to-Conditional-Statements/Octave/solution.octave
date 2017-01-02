@@ -1,0 +1,9 @@
+inputNum = input("");
+
+if (rem(inputNum,2) == 1)
+    printf("Weird");
+elseif (inputNum >= 6 && inputNum <= 20)
+    printf("Weird");
+else
+    printf("Not Weird");
+endif
