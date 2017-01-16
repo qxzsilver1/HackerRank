@@ -12,5 +12,4 @@ m = for _ <- 1..n do
         IO.gets("") |> String.strip
 end
 
-#m = IO.stream(:stdio, :line) |> Enum.map(&String.strip/1)
 Enum.each(m, &(Solution.stringprint(&1)))
