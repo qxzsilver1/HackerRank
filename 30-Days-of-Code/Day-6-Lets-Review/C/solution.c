@@ -18,11 +18,11 @@ int main() {
         int n;
         n = strlen(s);
         
-        for (int j = 0; j < n; i++) {
+        for (int j = 0; j < n; j++) {
             if (j % 2 == 0)
-                strcat(firstHalf, &s[j]);
+                strncat(firstHalf, &s[j], 1);
             else
-                strcat(secondHalf, &s[j]);
+                strncat(secondHalf, &s[j], 1);
         }
         
         printf("%s %s\n", firstHalf, secondHalf);
