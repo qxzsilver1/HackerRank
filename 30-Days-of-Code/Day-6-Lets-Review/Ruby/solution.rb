@@ -5,7 +5,6 @@ words = Array.new(n)
     words[i] = gets.strip
 end
 
-
 def process(word)
     letters = word.split("")
     firstHalf = []
