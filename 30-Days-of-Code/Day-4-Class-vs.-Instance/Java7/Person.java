@@ -41,6 +41,6 @@ public class Person {
 		p.amIOld();
 		System.out.println();
         }
-	sc.close);
+	sc.close();
        }
 }
