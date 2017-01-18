@@ -10,6 +10,7 @@ fn main() {
         let s = line.unwrap();
         let mut firstHalf = String::new();
         let mut secondHalf = String::new();
+        
         for (i, c) in s.char_indices() {
             if i % 2 == 0 {
                 firstHalf.push(c);
@@ -17,6 +18,7 @@ fn main() {
                 secondHalf.push(c);
             }
         }
+        
         println!("{} {}", firstHalf, secondHalf);
     }
 }
