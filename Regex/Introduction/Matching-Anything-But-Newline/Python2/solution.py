@@ -1,0 +1,10 @@
+regex_pattern = r"^...\....\....\....$"	# Do not delete 'r'.
+
+import re
+import sys
+
+test_string = raw_input()
+
+match = re.match(regex_pattern, test_string) is not None
+
+print str(match).lower()
