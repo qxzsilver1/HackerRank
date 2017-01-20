@@ -1,0 +1,15 @@
+/*
+Enter your query here.
+*/
+SELECT DISTINCT CITY
+FROM STATION
+WHERE ID % 2 = 0;
+
+/*
+or:
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE MOD(ID, 2) = 0;
+
+*/
