@@ -10,7 +10,7 @@ end
 
 def here_doc
   # Here doc string here
-    document = <<-HERE
+    <<-HERE
     Hello World and others!
     HERE
 end
