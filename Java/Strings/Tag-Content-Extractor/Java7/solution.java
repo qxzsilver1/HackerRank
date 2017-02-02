@@ -20,13 +20,12 @@ public class Solution{
             Pattern p = Pattern.compile(pattern);
             Matcher m =  p.matcher(line);
 
-            while(m.find())
-            {
+            while(m.find()) {
                 System.out.println(m.group(2));
                 count++;
             }
           
-            if(count == 0){
+            if(count == 0) {
                 System.out.println("None");
             }
          
