@@ -7,22 +7,22 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-    int m, num;
-    cin >> m;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int N, x;
+    cin >> N;
     vector<int> v;
     
-    for (int i=0; i<m; i++){
-        cin >> num;
-        v.push_back(num);
+    for (int i = 0; i < N; i++){
+        cin >> x;
+        v.push_back(x);
     }
     
-    int n, val;
-    cin >> n;
-    for (int i=0; i<n; i++){
-        cin >> val;
-        vector<int>::iterator low = lower_bound(v.begin(), v.end(), val);
-        if (v[low - v.begin()] == val)
+    int q, y;
+    cin >> q;
+    for (int i = 0; i < q; i++){
+        cin >> y;
+        vector<int>::iterator low = lower_bound(v.begin(), v.end(), y);
+        if (v[low - v.begin()] == y)
             cout << "Yes " << (low - v.begin()+1) << endl;
         else
             cout << "No " << (low - v.begin()+1) << endl;
