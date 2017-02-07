@@ -2,7 +2,6 @@
 # And the code supplied here: https://github.com/uwescience/datasci_course_materials/blob/master/assignment3/wordcount.py
 import json
 import sys
-import string
 from collections import OrderedDict
 class MapReduce:
     def __init__(self):
@@ -14,7 +13,7 @@ class MapReduce:
         self.intermediate[key].append(value)
 
     def emit(self, value):
-        self.result.append(value)
+        self.result.append(value) 
 
     def execute(self, data, mapper, reducer):
         for line in data:
@@ -24,40 +23,38 @@ class MapReduce:
         for key in self.intermediate:
             reducer(key, self.intermediate[key])
 
-        # jenc = json.JSONEncoder()
+        jenc = json.JSONEncoder()
         for item in self.result:
             print item
 
 mapReducer = MapReduce()
+ns = None
+nr = None
 
 def mapper(record):
+    global ns, nr
     key = record["key"]
     value = record["value"]
-    # ADD THE REQUIRED LOGIC BELOW
-    # You may need to add some lines for the mapper logic to work
-    # At the end, you need to complete the emit intermediate step
-    mapReducer.emitIntermediate(value, key)
+    if key == 1:
+        ns, nr = map(int, value.split(' '))
+    else:
+        if key > ns+1:
+            t = "r"
+        else:
+            t = "s"
+        mapReducer.emitIntermediate(value.strip(), t)
 
 def reducer(key, list_of_values):
     # ADD THE REQUIRED LOGIC BELOW
     # You may need to add some lines for the reducer logic to work
     # At the end, you need to complete the emit step
-    flag = 0
-    for item in list_of_values:
-        flag |= (1 << item)
-    if flag == 3:
+    if len(set(list_of_values)) > 1:
         mapReducer.emit(key)
 
-
 if __name__ == '__main__':
-    R_str, C_str = sys.stdin.readline().split(' ')
-    R = string.atoi(R_str)
-    C = string.atoi(C_str)
     inputData = []
     counter = 0
     for line in sys.stdin:
         counter += 1
-        inputData.append(json.dumps({"key":0 if counter<R else 1,"value":string.atoi(line)}))
-        if counter >= R + C:
-            break
+        inputData.append(json.dumps({"key":counter,"value":line}))
     mapReducer.execute(inputData, mapper, reducer)
