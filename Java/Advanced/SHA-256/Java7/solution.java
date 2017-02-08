@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
 
-
 public class Solution {
 
     public static void main(String[] args) {
