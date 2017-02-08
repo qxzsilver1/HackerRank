@@ -12,7 +12,6 @@ public class Solution {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(str.getBytes());
-            // return bytesToHex(md.digest
             byte[] digest = md.digest();
             for (byte b : digest) {
                 System.out.printf("%02x", b);
