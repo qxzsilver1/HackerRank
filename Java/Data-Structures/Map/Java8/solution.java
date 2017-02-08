@@ -19,13 +19,10 @@ class Solution{
       while(in.hasNext())
       {
          String s=in.nextLine();
-         try {
-             int temp = map.get(s);
-             System.out.println(s + "=" + temp);
-         }
-         catch (NullPointerException e) {
+         if (map.containsKey(s))
+             System.out.println(s + "=" + map.get(s));
+         else
              System.out.println("Not found");
-         }
       }
    }
 }
