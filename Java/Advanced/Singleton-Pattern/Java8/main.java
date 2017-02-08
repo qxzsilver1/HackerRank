@@ -10,5 +10,5 @@ class Singleton{
     private Singleton() {}
     public String str;
     private static final Singleton instance = new Singleton();
-    static Singleton getSingleInstance() { return instance; }
+    static synchronized Singleton getSingleInstance() { return instance; }
 }
