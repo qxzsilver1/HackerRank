@@ -16,7 +16,7 @@ public class Solution {
             s = sc.next();
             i = sc.nextInt();
             j = sc.nextInt();
-            switch(s){
+            switch(s) {
                 case("AND"): 
                   if (i == 1) 
                     b1.and(b2); 
