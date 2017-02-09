@@ -4,7 +4,7 @@ class Points(object):
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
-        self.z =z
+        self.z = z
 
     def __sub__(self, no):
         return Points(self.x-no.x, self.y-no.y, self.z-no.z)
