@@ -2,11 +2,11 @@
 def matrix_printer(arr,n,m):
     for i in range(n):
         if i == 0:
-            print('[[' + ' '.join(map(str, arr[0:m][0])) + ']')
+            print('[[' + ' '.join(map(str, arr[0][0:m])) + ']')
         elif i == n-1:
-            print(' [' + ' '.join(map(str, arr[0:m][n-1])) + ']]')
+            print(' [' + ' '.join(map(str, arr[n-1][0:m])) + ']]')
         else:
-            print(' [' + ' '.join(map(str, arr[0:m][i])) + ']')
+            print(' [' + ' '.join(map(str, arr[i][0:m])) + ']')
             
 def matrix_flatten_printer(arr):
     print('[' + ' '.join(' '.join(map(str,sl)) for sl in arr) + ']')
