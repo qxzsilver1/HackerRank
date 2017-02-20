@@ -7,7 +7,7 @@ interface AdvancedArithmetic{
 class MyCalculator implements AdvancedArithmetic {
     public int divisor_sum(int n) {
         int sum = 0;
-        for (int i = 1; i <= Math.sqrt(n); i++) {
+        for (int i = 1; i < Math.sqrt(n); i++) {
             if (n % i == 0) {
                 if (n == 1)
                     sum = 1;
@@ -15,6 +15,9 @@ class MyCalculator implements AdvancedArithmetic {
                     sum += (i + n/i);
             }
         }
+      
+        if (Math.sqrt(n) == Math.round(Math.sqrt(n)) && n % Math.sqrt(n) == 0)
+            sum += Math.sqrt(n);
         
         return sum;
     }
