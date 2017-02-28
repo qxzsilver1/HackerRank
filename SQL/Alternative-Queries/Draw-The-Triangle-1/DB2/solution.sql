@@ -7,8 +7,8 @@
 */
 with x(id,val) as 
 (
- select 1, REPEAT('*',1) from sysibm.sysdummy1
+ select 20, REPEAT('*',20) from sysibm.sysdummy1
  union all
- select id+1, REPEAT('*',id+1) from x where id < 20
+ select id-1, REPEAT('*',id-1) from x where id > 1
 )
 select val from x;
