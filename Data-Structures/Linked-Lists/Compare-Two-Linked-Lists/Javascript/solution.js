@@ -15,7 +15,7 @@ function compareLinkedLists( headA, headB) {
     if (headA == null && headB == null) return 1;
     
     if (headA != null && headB != null)
-        return (((headA.data == headB.data) | 0) && compareLinkedLists(headA.next, headB.next)) | 0
+        return (((headA.data == headB.data) | 0) && compareLinkedLists(headA.next, headB.next)) | 0 //solution to convert boolean in asm.js 
         
     return 0
 }
