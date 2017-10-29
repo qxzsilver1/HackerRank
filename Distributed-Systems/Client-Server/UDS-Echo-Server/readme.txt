@@ -1,3 +1,3 @@
-Completed all languages available 2017-4-23 except Swift, C++14
+Completed all languages available 2017-4-23 except Swift
 
-C++14 is routing to solution.py, weird error. Should work as with C, C++.
+Update: C++14 issue fixed.
